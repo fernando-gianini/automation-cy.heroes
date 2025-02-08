@@ -24,6 +24,6 @@ describe('New Hero Default User', () => {
       LoginPage.clickLoginPage()
       LoginPage.loginWithAnyUser(userData.admUserSuccess.email, userData.admUserSuccess.password)  
       NewHeroPage.clickNewHero()
-      NewHeroPage.createNewHero(chance.last(),chance.dollar({max: 5000}),chance.prime({ min: 10, max: 50 }),chance.prime({ min: 1, max: 20 }))
+      NewHeroPage.createNewHero(chance.last(),chance.prime({ min: 10, max: 500 }),chance.prime({ min: 10, max: 50 }),chance.prime({ min: 1, max: 20 }))
     })
   })  
