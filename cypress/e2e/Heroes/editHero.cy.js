@@ -1,6 +1,6 @@
-import userData from '../fixtures/userdata.json'
-import loginPage from '../pages/loginPage'
-import editHero from '../pages/editHeroPage'
+import userData from '../../fixtures/userdata.json'
+import loginPage from '../../pages/loginPage'
+import editHero from '../../pages/editHeroPage'
 
 const Chance = require('chance');
 
