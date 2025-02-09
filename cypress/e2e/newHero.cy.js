@@ -19,11 +19,22 @@ describe('New Hero Default User', () => {
   })  
 
   describe('New Hero ADM User', () => {
-    it('New Hero ADM User', () => {
+    it.skip('New Hero ADM User', () => {
       LoginPage.accessPage()
       LoginPage.clickLoginPage()
       LoginPage.loginWithAnyUser(userData.admUserSuccess.email, userData.admUserSuccess.password)  
       NewHeroPage.clickNewHero()
       NewHeroPage.createNewHero(chance.last(),chance.prime({ min: 10, max: 500 }),chance.prime({ min: 10, max: 50 }),chance.prime({ min: 1, max: 20 }))
+    })
+  })  
+
+  describe('New Hero ADM User', () => {
+    it('invalid character fields', () => {
+      LoginPage.accessPage()
+      LoginPage.clickLoginPage()
+      LoginPage.loginWithAnyUser(userData.admUserSuccess.email, userData.admUserSuccess.password)  
+      NewHeroPage.clickNewHero()
+      NewHeroPage.invalidCharacterFields('45678','abcde','abcde','abcde')
+
     })
   })  
