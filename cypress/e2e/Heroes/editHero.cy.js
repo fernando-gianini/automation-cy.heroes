@@ -10,10 +10,18 @@ const LoginPage = new loginPage ()
  
 describe ('Edit Hero', () => {
    it('Edit Hero', () => {
-    LoginPage.accessPage()
-    LoginPage.clickLoginPage()
-    LoginPage.loginWithAnyUser(userData.admUserSuccess.email, userData.admUserSuccess.password) 
-    EditHero.accessEditHeroPage()
-    EditHero.editDetailHero(chance.last(),chance.prime({ min: 10, max: 500 }),chance.prime({ min: 10, max: 50 }),chance.prime({ min: 1, max: 20 }))
+        LoginPage.accessPage()
+        LoginPage.clickLoginPage()
+        LoginPage.loginWithAnyUser(userData.admUserSuccess.email, userData.admUserSuccess.password) 
+        EditHero.accessEditHeroPage()
+        EditHero.editDetailHero(chance.last(),chance.prime({ min: 10, max: 500 }),chance.prime({ min: 10, max: 50 }),chance.prime({ min: 1, max: 20 }))
     })
 })
+    it('Invalid character fields', () => {
+        LoginPage.accessPage()
+        LoginPage.clickLoginPage()
+        LoginPage.loginWithAnyUser(userData.admUserSuccess.email, userData.admUserSuccess.password)  
+        EditHero.accessEditHeroPage()
+        EditHero.invalidCharacterFields('45678','abde','abcde','abcde')
+
+  })
