@@ -5,14 +5,14 @@ const LoginPage = new loginPage ()
 
 describe('Login User', () => {
   it('Login Default User Sucess', () => {
-    LoginPage.accessPage()
-    LoginPage.clickLoginPage()
-    LoginPage.loginWithAnyUser(userData.defaultUserSuccess.email, userData.defaultUserSuccess.password)  
+      LoginPage.accessPage()
+      LoginPage.clickLoginPage()
+      LoginPage.loginWithAnyUser(userData.defaultUserSuccess.email, userData.defaultUserSuccess.password)  
   })
 
   it('Login ADM User Sucess', () => {
-    LoginPage.accessPage()
-    LoginPage.clickLoginPage()
-    LoginPage.loginWithAnyUser(userData.admUserSuccess.email, userData.admUserSuccess.password)  
+      LoginPage.accessPage()
+      LoginPage.clickLoginPage()
+      LoginPage.loginWithAnyUser(userData.admUserSuccess.email, userData.admUserSuccess.password)  
   })
 })  
